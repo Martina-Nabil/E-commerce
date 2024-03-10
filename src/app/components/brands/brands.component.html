@@ -1,0 +1,15 @@
+<section class="py-5 mt-5">
+  <div class="row g-4">
+    <h2 class="text-center text-success my-4 fw-bold">All Brands</h2>
+    <div
+      class="col-sm-6 col-md-4 col-lg-3"
+      *ngFor="let brand of brands"
+      role="button"
+    >
+      <div class="border border-success p-3 shadow rounded">
+        <img [src]="brand.image" [alt]="brand.name" class="w-100" />
+        <h3 class="h5 text-center">{{ brand.name }}</h3>
+      </div>
+    </div>
+  </div>
+</section>

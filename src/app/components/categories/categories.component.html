@@ -1,0 +1,22 @@
+<section class="py-5 mt-5">
+  <div class="row g-4 justify-content-center mt-5">
+    <div
+      class="col-sm-6 col-md-4 col-lg-3"
+      *ngFor="let category of categoryData"
+    >
+      <div
+        role="button"
+        class="border border-success rounded p-2 shadow"
+        [routerLink]="['/categorydetails', category._id]"
+      >
+        <img
+          [src]="category.image"
+          [alt]="category.name"
+          class="w-100"
+          height="370px"
+        />
+        <h3 class="text-center text-main my-3">{{ category.name }}</h3>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary py-3 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img src="./assets/images/freshcart-logo.svg" alt=""
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive="active-link"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="products"
+            routerLinkActive="active-link"
+            >Products</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="categories"
+            routerLinkActive="active-link"
+            >Categories</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="brands" routerLinkActive="active-link"
+            >Brands</a
+          >
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLink="/setting"
+            routerLinkActive="active-link"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Setting
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/setting/update"
+                >Update Password</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/setting/forgot"
+                >Forgot Password</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto mb-lg-0 d-flex align-items-center">
+        <li class="nav-item">
+          <a class="nav-link position-relative" routerLink="wishlist"
+            ><i class="fa-solid fa-heart fa-2x" style="color: red"></i
+            ><span class="position-absolute top-0 end-0 badge bg-secondary">
+              {{ numFavorites }}</span
+            >
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" routerLink="cart"
+            ><i class="fas fa-cart-shopping fa-2x text-main"></i
+            ><span class="position-absolute top-0 end-0 badge bg-secondary">{{
+              cartNum
+            }}</span>
+          </a>
+        </li>
+        <li class="nav-item" role="button">
+          <i class="fa-brands fa-instagram me-3"></i>
+          <i class="fa-brands fa-facebook me-3"></i>
+          <i class="fa-brands fa-tiktok me-3"></i>
+          <i class="fa-brands fa-twitter me-3"></i>
+          <i class="fa-brands fa-linkedin me-3"></i>
+          <i class="fa-brands fa-youtube me-3"></i>
+        </li>
+        <li class="nav-item" role="button">
+          <span (click)="logoutUser()">SignOut</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
